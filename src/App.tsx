@@ -1,7 +1,7 @@
 import { Header } from "./components/header";
-import { Section } from "./components/section";
 import "./App.css";
 import { AppProvider } from "./providers/app-provider";
+import { About } from "./components/about";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
           <Header />
         </div>
         <div className="content">
-          <Section />
+          <About />
         </div>
       </main>
     </AppProvider>

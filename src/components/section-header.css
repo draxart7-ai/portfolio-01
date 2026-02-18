@@ -1,0 +1,21 @@
+.SectionHeader {
+  background-color: red;
+  background-image: url("/assets/bgImage-02.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgb(78, 78, 78);
+  border-top: 2px solid rgb(78, 78, 78);
+  .title {
+    margin: 8px;
+    color: white;
+    text-shadow: 2px 2px rgb(78, 78, 78);
+  }
+  hr {
+    width: 100%;
+  }
+}
