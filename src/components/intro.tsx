@@ -11,6 +11,8 @@ export const Intro: React.FC = () => {
     y: undefined,
   });
 
+  const headerHeight = 62;
+
   const colorArray: string[] = [
     "rgb(66, 49, 138)",
     "rgb(61, 175, 86)",
@@ -26,7 +28,7 @@ export const Intro: React.FC = () => {
     if (!c) return;
 
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight - headerHeight;
     console.log({ h: canvas.height, w: canvas.width });
 
     // 3. Add types to Class Properties and Constructor Parameters
@@ -75,7 +77,7 @@ export const Intro: React.FC = () => {
           this.dx = -this.dx;
         }
         if (
-          this.y + this.radius > window.innerHeight ||
+          this.y + this.radius > window.innerHeight - headerHeight ||
           this.y - this.radius < 0
         ) {
           this.dy = -this.dy;
@@ -109,7 +111,9 @@ export const Intro: React.FC = () => {
       for (let i = 0; i < totalCircles; i++) {
         const radius = Math.random() * 3 + 1;
         const x = Math.random() * (window.innerWidth - radius * 2) + radius;
-        const y = Math.random() * (window.innerHeight - radius * 2) + radius;
+        const y =
+          Math.random() * (window.innerHeight - headerHeight - radius * 2) +
+          radius;
         // Speed
         const dx = (Math.random() - 0.5) * 0.5;
         const dy = (Math.random() - 0.5) * 0.5;
@@ -125,18 +129,18 @@ export const Intro: React.FC = () => {
     let animationId: number;
     const animate = () => {
       animationId = requestAnimationFrame(animate);
-      c.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      c.clearRect(0, 0, window.innerWidth, window.innerHeight - headerHeight);
       circleArray.forEach((circle) => circle.update());
     };
 
     const handleMouseMove = (event: MouseEvent) => {
-      mouse.current.x = event.clientX;
-      mouse.current.y = event.clientY;
+      mouse.current.x = event.clientX + window.scrollX;
+      mouse.current.y = event.clientY + window.scrollY;
     };
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = window.innerHeight - headerHeight;
       init();
     };
 
@@ -154,12 +158,21 @@ export const Intro: React.FC = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: "red" }}>
+    <div
+      style={{
+        backgroundColor: "red",
+        overflow: "hidden",
+        position: "relative",
+        top: headerHeight,
+        height: window.innerHeight - headerHeight,
+      }}
+    >
       <canvas
         ref={canvasRef}
         style={{
           backgroundColor: "rgb(72, 87, 94)",
-          position: "relative",
+          position: "absolute",
+          top: 0,
         }}
       />
       <div className="Intro" id="Intro">
