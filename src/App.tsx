@@ -10,10 +10,10 @@ function App() {
         <div className="header">
           <Header />
         </div>
-        <div className="intro">
+        <div className="intro" style={{ marginBottom: "62px" }}>
           <Intro />
         </div>
-        <div className="content">
+        <div className="about">
           <About />
         </div>
       </div>

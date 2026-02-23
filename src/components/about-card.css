@@ -1,0 +1,15 @@
+.AboutCard {
+  background-color: white;
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  .title {
+    color: rgb(70, 125, 197);
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
