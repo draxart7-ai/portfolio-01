@@ -177,7 +177,6 @@ export const Intro: React.FC = () => {
       />
       <div className="Intro" id="Intro">
         <div className="header h1">
-          <div className="iam">I am</div>
           <div className="name">Alan Curtis</div>
         </div>
         <div className="sub">
