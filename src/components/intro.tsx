@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./intro.css";
 
 export const Intro: React.FC = () => {
   // 1. Properly type the Canvas Ref
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [containerHeight, setContainerHeight] = useState(0);
 
   // 2. Type the Mouse Ref
   const mouse = useRef<{ x: number | undefined; y: number | undefined }>({
@@ -29,7 +30,7 @@ export const Intro: React.FC = () => {
 
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight - headerHeight;
-    console.log({ h: canvas.height, w: canvas.width });
+    setContainerHeight(window.innerHeight - headerHeight);
 
     // 3. Add types to Class Properties and Constructor Parameters
     class Circle {
@@ -141,6 +142,7 @@ export const Intro: React.FC = () => {
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight - headerHeight;
+      setContainerHeight(window.innerHeight - headerHeight);
       init();
     };
 
@@ -160,11 +162,10 @@ export const Intro: React.FC = () => {
   return (
     <div
       style={{
-        backgroundColor: "red",
         overflow: "hidden",
         position: "relative",
         top: headerHeight,
-        height: window.innerHeight - headerHeight,
+        height: containerHeight,
       }}
     >
       <canvas
