@@ -12,8 +12,10 @@
   border-top: 2px solid rgb(78, 78, 78);
   .title {
     margin: 8px;
-    color: white;
-    text-shadow: 2px 2px rgb(78, 78, 78);
+    color: rgb(33, 133, 66);
+    /* text-shadow: 2px 2px rgb(78, 78, 78); */
+    font-size: 34px;
+    font-weight: 700;
   }
   hr {
     width: 100%;

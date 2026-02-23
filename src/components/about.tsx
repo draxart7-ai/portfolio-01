@@ -32,7 +32,15 @@ export const About = () => {
       <SectionHeader title="About" />
       <div className="container" style={{ padding: "10px" }}>
         <div className="me">
-          <img src="/assets/alan-01.jpg" alt="profile" height="300px" />
+          <img
+            src="/assets/alan-01.jpg"
+            alt="profile"
+            height="300px"
+            style={{
+              borderRadius: "24px",
+              boxShadow: "2px 2px 2px rgba(10, 10, 10, 0.5)",
+            }}
+          />
           <div className="text">
             <div className="h2 title"> Hello, I am Alan. </div>
             <div className="h5 subtitle">Web Developer | Technical Artist</div>
@@ -51,5 +59,3 @@ export const About = () => {
     </div>
   );
 };
-
-export default About;
