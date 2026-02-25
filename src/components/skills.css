@@ -1,2 +1,112 @@
 .Skills {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  .container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    .skill-section {
+      .sub-header {
+        font-size: 24px;
+        margin: 10px;
+      }
+      .skill-cards-container {
+        .grid {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 20px;
+          /* background-color: white; */
+          gap: 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .art-skills {
+    width: 100%;
+    .info {
+      display: grid;
+      grid-template-columns: 300px auto;
+      .card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        background-color: red;
+        border-radius: 10px;
+        font-size: 24px;
+        .sub-header-art {
+          margin-bottom: 5px;
+        }
+        .description {
+          font-size: 18px;
+        }
+      }
+      .bullet-points {
+        margin: 10px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        border: 2px solid blue;
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          ol {
+            padding-left: 20px;
+            list-style-type: circle;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            li {
+              margin: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+/* 
+@media (max-width: 777px) {
+  .Skills {
+    .container {
+      .art-skills {
+        .info {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
+        }
+      }
+    }
+  }
+} */
+/* 
+@media (max-width: 445px) {
+  .Skills {
+    .container {
+      .art-skills {
+        .info {
+          .bullet-points {
+            // align-items: center;
+            // justify-content: center;
+            .container {
+              display: flex;
+              justify-content: center;
+              ol {
+                grid-template-columns: 1fr;
+                // align-content: center;
+                // justify-content: center;
+                // align-items: center;
+                // justify-items: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} */
