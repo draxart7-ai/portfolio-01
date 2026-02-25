@@ -1,0 +1,36 @@
+.About {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(72, 87, 94);
+    .me {
+      /* display: grid;
+      grid-template-columns: 300px minmax(300px, 500px);
+      gap: 10px; */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      .text {
+        max-width: 500px;
+        .title {
+          color: rgb(31, 133, 31);
+          font-size: 24px;
+          font-weight: 700;
+        }
+        .subtitle {
+          color: white;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .aboutCards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
