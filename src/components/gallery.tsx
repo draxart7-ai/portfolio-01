@@ -1,7 +1,7 @@
 import { SectionHeader } from "./section-header";
 import "./gallery.css";
 
-const content = [];
+// const content = [];
 
 export const Gallery = () => {
   console.log("hello");

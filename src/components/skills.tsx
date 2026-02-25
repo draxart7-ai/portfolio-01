@@ -1,7 +1,7 @@
 import { SectionHeader } from "./section-header";
 import "./skills.css";
 
-const content = [];
+// const content = [];
 
 export const Skills = () => {
   return (

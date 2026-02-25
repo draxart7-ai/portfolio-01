@@ -1,7 +1,7 @@
 import { SectionHeader } from "./section-header";
 import "./contact.css";
 
-const content = [];
+// const content = [];
 
 export const Contact = () => {
   return (
