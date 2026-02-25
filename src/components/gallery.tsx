@@ -4,6 +4,7 @@ import "./gallery.css";
 const content = [];
 
 export const Gallery = () => {
+  console.log("hello");
   return (
     <div className="Gallery">
       <SectionHeader title="Gallery" />
